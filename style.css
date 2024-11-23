@@ -1,106 +1,87 @@
-/* Genel Sayfa Stili */
+/* Genel ayarlar */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #001f3f; /* Lacivert arka plan */
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #003366; /* Lacivert arka plan */
+    color: white;
 }
 
 header {
-    margin-bottom: 2em;
+    background-color: #ff6600; /* Turuncu başlık */
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+    margin: 0;
 }
 
-header p {
-    font-size: 1.2em;
-    margin-bottom: 2em;
-}
-
-/* Buton Stili */
-.button {
-    display: inline-block;
-    margin: 1em;
-    padding: 0.75em 1.5em;
-    background-color: #FF851B; /* Turuncu */
-    color: #fff;
+nav a {
+    color: white;
+    margin: 0 15px;
     text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro h2 {
+    font-size: 2em;
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff6600;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
     border-radius: 5px;
-    font-weight: bold;
+    margin-top: 20px;
 }
 
-.button:hover {
-    background-color: #FF5733; /* Daha koyu turuncu */
+.btn:hover {
+    background-color: #e65c00;
 }
 
-/* Galeri için stil */
+/* Galeri Stili */
 .gallery {
     display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-    overflow-x: scroll; /* Kaydırma özelliği */
-    scroll-snap-type: x mandatory;
-    padding: 10px;
+    overflow-x: scroll;
+    gap: 10px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 .gallery img {
-    width: 250px; /* Fotoğraf boyutunu ayarla */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    scroll-snap-align: start;
-    margin: 10px;
-}
-
-/* Fotoğraf üzerine gelince büyüme efekti */
-.gallery img:hover {
-    transform: scale(1.05); /* Fotoğraf üzerine gelince büyüsün */
-}
-
-/* Ana sayfa rengi */
-main {
-    background-color: #003366; /* Daha koyu lacivert */
-    padding: 20px;
     width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Fotoğraf galerisinde kaydırma efekti */
-.gallery::-webkit-scrollbar {
-    height: 12px; /* Yatay kaydırıcı */
-}
-
-.gallery::-webkit-scrollbar-thumb {
-    background-color: #FF851B; /* Turuncu renk */
-    border-radius: 10px;
-}
-
-/* Başlıklar */
-h2 {
-    font-size: 2em;
-    color: #FF851B;
-    margin-bottom: 1em;
-}
-
-/* Küçük ekranlar için esneklik */
-@media (max-width: 768px) {
+/* Mobil uyumluluk */
+@media screen and (max-width: 600px) {
     .gallery {
         flex-direction: column;
         align-items: center;
     }
 
     .gallery img {
-        width: 80%; /* Küçük ekranlarda fotoğraf boyutunu küçült */
+        max-width: 100%;
     }
 }
+
+
 
