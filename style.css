@@ -1,75 +1,107 @@
 /* Genel Ayarlar */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff0f5;
-  color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff0f5;
+    color: #333;
 }
 
 header {
-  background: #ff69b4;
-  padding: 10px;
+    background: #ff69b4;
+    padding: 20px;
+    text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+header h1 {
+    margin: 0;
+    color: white;
+    font-size: 2rem;
 }
 
-nav ul li {
-  margin: 0 15px;
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a.active {
-  text-decoration: underline;
+nav a.active {
+    text-decoration: underline;
 }
 
 footer {
-  text-align: center;
-  padding: 10px;
-  background: #ff69b4;
-  color: white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: #ff69b4;
+    color: white;
 }
 
 /* Galeri */
+.gallery {
+    padding: 20px;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
 .gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
-  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.gallery-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
-/* Hover animasyonu */
-.gallery-container img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+.gallery-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 /* Fade-in animasyonu */
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+    to { opacity: 1; }
 }
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .gallery h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px;
+    }
+}
+
