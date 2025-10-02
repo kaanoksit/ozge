@@ -1,87 +1,75 @@
-/* Genel ayarlar */
+/* Genel Ayarlar */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #003366; /* Lacivert arka plan */
-    color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff0f5;
+  color: #333;
 }
 
 header {
-    background-color: #ff6600; /* Turuncu başlık */
-    padding: 20px;
-    text-align: center;
+  background: #ff69b4;
+  padding: 10px;
 }
 
-header h1 {
-    margin: 0;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
+nav ul li {
+  margin: 0 15px;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.intro {
-    text-align: center;
-    padding: 50px 20px;
+nav ul li a.active {
+  text-decoration: underline;
 }
 
-.intro h2 {
-    font-size: 2em;
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #ff69b4;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-.intro p {
-    font-size: 1.2em;
+/* Galeri */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #ff6600;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
-    margin-top: 20px;
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
-.btn:hover {
-    background-color: #e65c00;
+/* Hover animasyonu */
+.gallery-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* Galeri Stili */
-.gallery {
-    display: flex;
-    overflow-x: scroll;
-    gap: 10px;
-    padding: 20px;
-    margin-top: 20px;
+/* Fade-in animasyonu */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
-
-.gallery img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Mobil uyumluluk */
-@media screen and (max-width: 600px) {
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .gallery img {
-        max-width: 100%;
-    }
-}
-
-
-
