@@ -1,27 +1,26 @@
-
-/* Genel Ayarlar */
+/* 🌙 Genel Ayarlar */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #001f3f; /* lacivert arka plan */
-    color: #fff; /* beyaz yazı */
+    background: #001f3f; /* Lacivert arka plan */
+    color: #ffffff; /* Beyaz yazı */
 }
 
 header {
-    background: #ff851b; /* turuncu header */
+    background: #ff851b; /* Turuncu header */
     padding: 20px;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    color: #001f3f; /* lacivert yazı */
+    color: #001f3f; /* Lacivert yazı */
     font-size: 2rem;
 }
 
 nav a {
-    color: #001f3f; /* lacivert link */
+    color: #001f3f; /* Lacivert link */
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
@@ -34,11 +33,11 @@ nav a.active {
 footer {
     text-align: center;
     padding: 10px;
-    background: #ff851b; /* turuncu footer */
-    color: #001f3f; /* lacivert yazı */
+    background: #ff851b; /* Turuncu footer */
+    color: #001f3f; /* Lacivert yazı */
 }
 
-/* Galeri */
+/* 📸 Galeri Alanı */
 .gallery {
     padding: 20px;
 }
@@ -46,6 +45,7 @@ footer {
 .gallery h2 {
     text-align: center;
     font-size: 1.8rem;
+    color: #ff851b;
 }
 
 .gallery-container {
@@ -58,6 +58,7 @@ footer {
 .gallery-item img {
     width: 100%;
     border-radius: 10px;
+    cursor: pointer;
     transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 0;
     animation: fadeIn 1s forwards;
@@ -65,7 +66,7 @@ footer {
 
 .gallery-item img:hover {
     transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(255, 133, 27, 0.4);
 }
 
 /* Fade-in animasyonu */
@@ -73,12 +74,11 @@ footer {
     to { opacity: 1; }
 }
 
-/* 🔹 Lightbox (tam ekran büyütme) */
+/* 🔥 Lightbox (Tam Ekran Görsel) */
 .lightbox {
     display: none;
     position: fixed;
     z-index: 9999;
-    padding: 20px;
     left: 0;
     top: 0;
     width: 100%;
@@ -108,6 +108,7 @@ footer {
     }
 }
 
+/* 🔸 Kapatma ve Yön Butonları */
 .close {
     position: absolute;
     top: 20px;
@@ -140,7 +141,7 @@ footer {
 .prev { left: 40px; }
 .next { right: 40px; }
 
-/* 🔹 Mobil Uyumluluk */
+/* 📱 Mobil Uyumluluk */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5rem;
@@ -173,11 +174,17 @@ footer {
     }
 
     .gallery h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .gallery-container {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: 8px;
     }
+
+    .lightbox-img {
+        max-width: 95%;
+        max-height: 75%;
+    }
 }
+
