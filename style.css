@@ -105,3 +105,47 @@ footer {
     }
 }
 
+/* Tam ekran fotoğraf görünümü */
+#fullscreen-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+#fullscreen-view.hidden {
+    display: none;
+}
+
+#fullscreen-view img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255, 133, 27, 0.7);
+    transition: transform 0.3s ease;
+}
+
+#fullscreen-view img:hover {
+    transform: scale(1.03);
+}
+
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: #ff851b;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#close-btn:hover {
+    color: #fff;
+}
