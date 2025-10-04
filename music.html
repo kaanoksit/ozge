@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müzik</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 🎵 Music Page Özel Stil */
+        .music-section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .music-section h2 {
+            font-size: 2rem;
+            color: #ff851b;
+            margin-bottom: 30px;
+        }
+
+        .music-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .music-card {
+            background: #001f3f;
+            border: 2px solid #ff851b;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 200px;
+        }
+
+        .music-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .music-card .info {
+            padding: 10px;
+        }
+
+        .music-card .info h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #ff851b;
+        }
+
+        .music-card .info a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #ff851b;
+            color: #001f3f;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .music-card .info a:hover {
+            background: #ffb84d;
+        }
+
+        .music-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 133, 27, 0.5);
+        }
+
+        /* Mobil */
+        @media (max-width: 480px) {
+            .music-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Özge ile Müzik</h1>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="gallery.html">Galeri</a>
+            <a href="about.html">Hakkımızda</a>
+            <a href="music.html" class="active">Müzik</a>
+        </nav>
+    </header>
+
+    <section class="music-section">
+        <h2>Şarkılarımız</h2>
+        <div class="music-container">
+            <!-- 1. Şarkı -->
+            <div class="music-card">
+                <img src="images/foto5.jpeg" alt="Şarkı 1 Kapak">
+                <div class="info">
+                    <h3>Şarkı 1</h3>
+                    <a href="https://open.spotify.com/track/53jL83ZJiZ57HV5RboDoUu" target="_blank">Spotify'da Dinle</a>
+                </div>
+            </div>
+
+            <!-- 2. Şarkı -->
+            <div class="music-card">
+                <img src="images/foto7.jpeg" alt="Şarkı 2 Kapak">
+                <div class="info">
+                    <h3>Şarkı 2</h3>
+                    <a href="https://open.spotify.com/track/3C4JZOciY0lxueOW78AhFQ" target="_blank">Spotify'da Dinle</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Özge ile Anılar. Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
